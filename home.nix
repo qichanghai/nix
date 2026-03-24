@@ -63,4 +63,8 @@
   home.sessionVariables = {
     EDITOR = "emacs";
   };
+
+  home.sessionPath = [
+    "$HOME/bin"
+  ];
 }
