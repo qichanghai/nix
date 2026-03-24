@@ -33,6 +33,10 @@
     initContent = ''
       eval "$(zoxide init zsh)"
     '';
+    shellAliases = {
+      hm = "home-manager switch --flake ~/nix-config#qichanghai";
+      hmu = "nix flake update ~/nix-config && home-manager switch --flake ~/nix-config#qichanghai";
+    };
   };
 
   programs.fzf.enable = true;
