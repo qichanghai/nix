@@ -16,6 +16,7 @@
     fzf
     eza
     zoxide
+    starship
   ];
 
   programs.git = {
@@ -37,6 +38,23 @@
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.zoxide.enable = true;
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = false;
+
+      format = "$directory$git_branch$git_status$character";
+
+      directory = {
+        truncation_length = 3;
+      };
+      character = {
+        success_symbol = "[❯](bold green)";
+        error_symbol = "[❯](bold red)";
+      };
+    };
+  };
 
   home.sessionVariables = {
     EDITOR = "emacs";
