@@ -61,7 +61,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "emacs";
+    EDITOR = "emacsclient";
   };
 
   home.sessionPath = [
